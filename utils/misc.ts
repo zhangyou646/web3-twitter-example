@@ -1,0 +1,25 @@
+import { DEFAULT_BROWSER_URL } from "./constants";
+
+export function extractHostname(url: string): string {
+  // find & remove protocol
+  let hostname = url.indexOf("//") > -1 ? url.split("/")[2] : url.split("/")[0];
+  // find & remove port number
+  hostname = hostname.split(":")[0];
+  // find & remove query string
+  hostname = hostname.split("?")[0];
+  return hostname;
+}
+
+// eslint-disable-next-line @typescript-eslint/explicit-module-boundary-types
+export function getBrowserUrl() {
+  return typeof window === "undefined" || typeof window.location === "undefined"
+    ? DEFAULT_BROWSER_URL
+    : window.location.href;
+}
+
+// eslint-disable-next-line @typescript-eslint/explicit-module-boundary-types
+export function listObject(obj: any) {
+  return Object.keys(obj).map((key) => {
+    return `${key}: ${obj[key]}`;
+  });
+}
