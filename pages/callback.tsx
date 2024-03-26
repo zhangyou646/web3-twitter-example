@@ -17,7 +17,6 @@ const CallbackPage = () => {
     const STATE = "my-state";
 
     useEffect(() => {
-        // 在客户端渲染时从localStorage中获取数据
         const storedAddress = localStorage.getItem('address');
         const storedSigner = localStorage.getItem('signer');
         setAddress(storedAddress);
@@ -39,7 +38,7 @@ const CallbackPage = () => {
 
         
 
-    }, [code,state]); // 将 code 和 state 添加为依赖项
+    }, [code,state]); 
 
     const getTwitterInfo = async (authClient,client) => {
         console.log('CLIENT_ID',process.env.CLIENT_ID as string)

@@ -175,7 +175,7 @@ export const Home = (): JSX.Element => {
     const sig = await signer.signMessage(msg);
     console.log("Signature", sig);
     console.log("isValid", utils.verifyMessage(msg, sig) === utils.getAddress(address));
-    // 使用localStorage保存数据
+    // localStorage store
     localStorage.setItem('address', address);
     localStorage.setItem('signer', sig);
   }
