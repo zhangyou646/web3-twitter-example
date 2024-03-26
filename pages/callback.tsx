@@ -9,7 +9,6 @@ const CallbackPage = () => {
     const [xme, setXme] = useState(null);
     const router = useRouter();
     const { code, state } = router.query; 
-    // 如果 code 和 state 都存在且满足条件，则执行后续逻辑
     console.log('code',code)
     console.log('state',state)
 
