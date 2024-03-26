@@ -193,6 +193,22 @@ const supportedChains: IChainData[] = [
       balance: '',
     },
   },
+  {
+    name: 'Merlin',
+    short_name: 'mel',
+    chain: 'Merlin',
+    network: 'mainnet',
+    chain_id: 4200,
+    network_id: 4200,
+    rpc_url: 'https://rpc.merlinchain.io/',
+    native_currency: {
+      symbol: 'BTC',
+      name: 'BTC',
+      decimals: '18',
+      contractAddress: '',
+      balance: '',
+    },
+  },
 ]
 
 export default supportedChains
